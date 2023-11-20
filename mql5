@@ -1,0 +1,211 @@
+
+//+------------------------------------------------------------------+
+//|                                              Golden Pickaxe MT5  |
+//|                                      Expert Advisor for Gold Trading |
+//|                                                  forexroboteasy.com |
+//|                                                Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+// Define input parameters for the trading system selection
+input int TradingSystem = 0; // 0: XAU Risky, 1: XAU Balanced, 2: XAU Classic, 3: XAU Risky Vol, 4: XAU Balanced Vol
+
+// Define input parameters for the Neural Network training
+input bool EnableNeuralNetworkTraining = true;
+
+// Define input parameters for the News and Stock Market Crash Filter
+input bool EnableNewsFilter = true;
+input bool EnableStockMarketCrashFilter = true;
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Main program
+void OnTick()
+{
+    // Check if Neural Network training is enabled
+    if (EnableNeuralNetworkTraining)
+    {
+        // Call function to retrain the Neural Network on broker's data
+        RetrainNeuralNetwork();
+    }
+
+    // Check if News and Stock Market Crash Filter is enabled
+    if (EnableNewsFilter && EnableStockMarketCrashFilter)
+    {
+        // Call function to filter out irrelevant market events
+        FilterNewsAndStockMarketCrash();
+    }
+
+    // Place trades based on the selected trading system
+    switch (TradingSystem)
+    {
+        case 0:
+            // Call function for XAU Risky trading system
+            TradeXAU_Risky();
+            break;
+        case 1:
+            // Call function for XAU Balanced trading system
+            TradeXAU_Balanced();
+            break;
+        case 2:
+            // Call function for XAU Classic trading system
+            TradeXAU_Classic();
+            break;
+        case 3:
+            // Call function for XAU Risky Vol trading system
+            TradeXAU_RiskyVol();
+            break;
+        case 4:
+            // Call function for XAU Balanced Vol trading system
+            TradeXAU_BalancedVol();
+            break;
+    }
+}
+
+// Function to retrain the Neural Network on broker's data
+void RetrainNeuralNetwork()
+{
+    // Add code here to retrain the Neural Network
+}
+
+// Function to filter out irrelevant market events
+void FilterNewsAndStockMarketCrash()
+{
+    // Add code here to filter news and stock market crash events
+}
+
+// Functions for each trading system
+void TradeXAU_Risky()
+{
+    // Add code here for XAU Risky trading system
+}
+
+void TradeXAU_Balanced()
+{
+    // Add code here for XAU Balanced trading system
+}
+
+void TradeXAU_Classic()
+{
+    // Add code here for XAU Classic trading system
+}
+
+void TradeXAU_RiskyVol()
+{
+    // Add code here for XAU Risky Vol trading system
+}
+
+void TradeXAU_BalancedVol()
+{
+    // Add code here for XAU Balanced Vol trading system
+}
